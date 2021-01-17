@@ -8,4 +8,4 @@ StdID | Name
 <!-- Replace name and student ids with acutally group member names and ids-->
 
 ## Description ##
-This repository contains assignments and project submitted to DM course offered in Fall 2020 at PafKiet.
+This repository contains assignments and project submitted to Artificial Intelligence course offered in Spring 2021 at PafKiet.
