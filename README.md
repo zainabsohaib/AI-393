@@ -1,5 +1,5 @@
-#AI 109 Fall 2020: Course Repository#
-###PROJECT MEMBERS###
+#AI 109 Fall 2020: Course Repository
+##PROJECT MEMBERS
 StdID | Name
 ------------ | -------------
 **63726** | **Zainab sohaib** <!--this is the group leader in bold-->
