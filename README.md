@@ -1,4 +1,4 @@
-# AI 109 SPRING 2021: Course Repository
+# AI 393 SPRING 2021: Course Repository
 ### PROJECT MEMBERS
 StdID | Name
 ------------ | -------------
