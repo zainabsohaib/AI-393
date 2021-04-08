@@ -1,92 +1,48 @@
-import numpy as np  # linear algebra
-import pandas as pd  # data processing, CSV file I/O (e.g. pd.read_csv)
-
-import os
-
-for dirname, _, filenames in os.walk('/kaggle/input'):
-    for filename in filenames:
-        print(os.path.join(dirname, filename))
-
 import pandas as pd
 import numpy as np
-from matplotlib import pyplot as plt    
-from sklearn.feature_selection import SelectKBest
-from sklearn.feature_selection import chi2
-from sklearn.preprocessing import LabelEncoder
-import scipy.stats as s
-import seaborn as sns
+import matplotlib.pyplot as plt
+import seaborn as sb
 from sklearn.model_selection import train_test_split
-from sklearn.linear_model import LinearRegression
-from sklearn import metrics
-from sklearn import svm
-from sklearn.svm import SVC
-from sklearn.model_selection import GridSearchCV
-from sklearn import preprocessing
-import math
-from sklearn.naive_bayes import GaussianNB
-from sklearn.naive_bayes import BernoulliNB
-from sklearn.naive_bayes import MultinomialNB
-from sklearn.naive_bayes import CategoricalNB
+from sklearn.linear_model import LogisticRegression
+from sklearn.metrics import classification_report
+from sklearn.metrics import accuracy_score
 
-df = pd.read_csv("../input/digit-recognizer/train.csv")
+dataset = pd.read_csv("train.csv")
+print(dataset.head(5))
+print("Total number of passengers: ",str(len(dataset.index)))
+sb.countplot(x="Survived",hue="Sex",data=dataset)
+plt.show()
 
-df.columns
-df["label"].value_counts()
+dataset["Fare"].plot.hist()
+plt.show()
+sb.countplot(x="Parch",data=dataset)
+plt.show()
 
-df.isnull().sum()
+print(dataset.isnull())
+print(dataset.isnull().sum())
+sb.heatmap(dataset.isnull(),yticklabels=False,cbar=False)
+plt.show()
+dataset.drop("Cabin",axis=1,inplace=True)
+dataset.dropna(inplace=True)
+sb.heatmap(dataset.isnull(),yticklabels=False,cbar=False)
+plt.show()
 
-df.info()
+print(pd.get_dummies(dataset["Sex"]))
+sex = pd.get_dummies(dataset["Sex"],drop_first=True)
+embark = pd.get_dummies(dataset["Embarked"],drop_first=True)
+pcl = pd.get_dummies(dataset["Pclass"],drop_first=True)
+dataset = pd.concat([dataset,sex,embark,pcl],axis=1)
 
-X = df.drop(["label"], axis=1)
-y = df["points"]
-X = X / 255
+print(dataset.head(5))
+dataset.drop(["Sex","Pclass","Embarked","PassengerId","Name","Ticket"],axis=1,inplace=True)
 
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.1, random_state=42)
+print(dataset.head(5))
+y = dataset["Survived"]
+x = dataset.drop("Survived",axis=1)
+X_train, X_test, Y_train, Y_test = train_test_split(x,y,test_size=0.3,random_state=1)
+logmodel = LogisticRegression()
+logmodel.fit(X_train,Y_train)
+predictions = logmodel.predict(X_test)
 
-reg = LinearRegression()
-reg.fit(X_train, y_train)
-
-y_test_pred_reg = reg.predict(X_test)
-metrics.r2_score(y_test, y_test_pred_reg)
-
-gnb = GaussianNB()
-y_pred_gnb = gnb.fit(X_train, y_train).predict(X_test)
-bnb = BernoulliNB()
-y_pred_bnb = bnb.fit(X_train, y_train).predict(X_test)
-mnb = MultinomialNB()
-y_pred_mnb = mnb.fit(X_train, y_train).predict(X_test)
-
-accuracy_gnb = metrics.accuracy_score(y_test, y_pred_gnb)
-accuracy_bnb = metrics.accuracy_score(y_test, y_pred_bnb)
-accuracy_mnb = metrics.accuracy_score(y_test, y_pred_mnb)
-print("Accuracy of GaussianNB: ", accuracy_gnb, " Accuracy of BernoulliNB: ", accuracy_bnb,
-      " Accuracy of MultinomialNB: ", accuracy_mnb)
-
-
-svm_clf = SVC(kernel="rbf", random_state=42, verbose=3, C=9)
-svm_clf.fit(X_train, y_train)
-
-
-# predicting the splited data
-y_test_pred_svm = svm_clf.predict(X_test)
-
-
-metrics.accuracy_score(y_test, y_test_pred_svm)
-
-
-test = pd.read_csv("../input/digit-recognizer/test.csv")
-test = test / 255
-svmFinalpred = svm_clf.predict(test)
-
-
-finalPred = pd.DataFrame(svmFinalpred, columns=["Label"])
-
-
-finalPred['ImageId'] = finalPred.index + 1
-finalPred = finalPred.reindex(['ImageId', 'Label'], axis=1)
-
-finalPred.to_csv('./submition.csv', index=False)
-
-
-
-
+print(classification_report(Y_test,predictions))
+print(accuracy_score(Y_test,predictions))
