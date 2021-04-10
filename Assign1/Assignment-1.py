@@ -1,3 +1,32 @@
+import os
+for dirname, _, filenames in os.walk('/kaggle/input'):
+    for filename in filenames:
+        print(os.path.join(dirname, filename))
+
+import pandas as pd
+import numpy as np
+from matplotlib import pyplot as plt
+from sklearn.feature_selection import SelectKBest
+from sklearn.feature_selection import chi2
+from sklearn.preprocessing import LabelEncoder
+import scipy.stats as s
+import seaborn as sns
+from sklearn.model_selection import train_test_split 
+from sklearn.linear_model import LinearRegression
+from sklearn import metrics
+from sklearn import svm
+from sklearn.svm import SVC
+from sklearn.model_selection import GridSearchCV
+from sklearn import preprocessing
+import math
+from sklearn.naive_bayes import GaussianNB
+from sklearn.naive_bayes import BernoulliNB 
+from sklearn.naive_bayes import MultinomialNB 
+from sklearn.naive_bayes import CategoricalNB
+
+df=pd.read_csv("../input/digit-recognizer/train.csv")
+df
+
 df.columns
 df["label"].value_counts()
 
