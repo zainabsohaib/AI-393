@@ -1,4 +1,25 @@
+df.columns
+df["label"].value_counts()
 
+df.isnull().sum()
+
+df.info()
+
+X = df.drop(["label"], axis=1)
+y = df["label"]
+X = X / 255
+
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.1, random_state=42)
+
+reg = LinearRegression()
+reg.fit(X_train, y_train)
+
+y_test_pred_reg = reg.predict(X_test)
+metrics.r2_score(y_test, y_test_pred_reg)
+
+gnb = GaussianNB()
+y_pred_gnb = gnb.fit(X_train, y_train).predict(X_test)
+bnb = BernoulliNB()
 
 y_pred_bnb = bnb.fit(X_train, y_train).predict(X_test)
 mnb = MultinomialNB()
