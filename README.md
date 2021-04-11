@@ -20,3 +20,18 @@ Second problem we faced with kaggle we were uploading the code file instead of c
 
 ### Problem 3:
 Third problem was with test file which was having scale image pixel error and when after fixing the error we trried to re upload the file it was having the size issue due to which we upload the zip file.
+
+## APPROACH
+We have use these following approches in this project :
+* Linear Regression
+* Naive Bayes
+* Libraries(scikit-learn,pandas,numpy,matplotlib,scipy,seaborn,math)
+* Cross Validation
+
+## DESCRIPTION
+
+## REFERENCES
+* https://github.com/AndreBiedenkapp/NaivePyes
+* https://scikit-learn.org/stable/modules/naive_bayes.html
+* https://www.kaggle.com/msahebi/mnist-naive-bayesian-classifier
+
