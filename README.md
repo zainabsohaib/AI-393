@@ -7,7 +7,7 @@ StdID | Name
 63555 | Muhammad umair hassan
 <!-- Replace name and student ids with acutally group member names and ids-->
 
-## PROBLEMS FACES
+## PROBLEMS FACED
 
 ### Problem 1: 
 First problem we faced with installing scikit-learn because we were using python2 which don't support scikit-learn anymore so we have used python3 and create virtual envirrnment.
