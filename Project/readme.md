@@ -30,6 +30,7 @@ Cross validation score of each technique with screenshots are following:
 ![linear unweighted 5 by 5](https://user-images.githubusercontent.com/68737826/115860964-a99be200-a44b-11eb-8f10-8232e4560bf3.PNG)
 
 * 5 by 5 multinomialNB unweighted filter
+![multinomialNB 5 by 5 unweighted](https://user-images.githubusercontent.com/68737826/115861147-df40cb00-a44b-11eb-9172-82c5c9855e73.PNG)
 
 
 
@@ -38,6 +39,7 @@ In MultinomialNB.py file we have make check object where we have instantiate Mul
 ## ACCURACY
 We have got 0.96700 accuray on 42000 data using 5x5 SVM unweighted filter.
 ![output image](https://user-images.githubusercontent.com/60998648/115859740-09918900-a44a-11eb-9025-134471a80205.jpeg)
+![accuracy](https://user-images.githubusercontent.com/68737826/115861253-05ff0180-a44c-11eb-9cd7-c46eba86e6fd.jpeg)
 
 ## REFERENCES
 
