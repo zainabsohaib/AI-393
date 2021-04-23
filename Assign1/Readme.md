@@ -29,6 +29,7 @@ We have use these following approches in this project :
 * Cross Validation
 
 ## DESCRIPTION
+In Assignment 1 we usie Naive Bayes method, Naive Bayes is the most straightforward and fastest algorithm, suitable for largedata sets. The Naive Bayes separator is used successfully in a variety of applications such as spam filtering, text classification, emotional analysis, and complimentary programs. It uses the Bayes theorem of the possibilities of predicting an unknown category and acccuracy.
 
 ## REFERENCES
 * https://github.com/AndreBiedenkapp/NaivePyes
