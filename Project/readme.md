@@ -24,7 +24,17 @@ Cross validation score of each technique with screenshots are following:
 ![linear 5 by 5 svm unweighted](https://user-images.githubusercontent.com/60998648/115858983-0518a080-a449-11eb-8fba-17cdc0f7d208.PNG)
 
 * 9 by 9 multinomialNB weighted convolution filter
-* ![multinomialnb 9 by 9 weighted](https://user-images.githubusercontent.com/60998648/115859314-748e9000-a449-11eb-9a36-942cf39fac0b.PNG)
+![multinomialnb 9 by 9 weighted](https://user-images.githubusercontent.com/60998648/115859314-748e9000-a449-11eb-9a36-942cf39fac0b.PNG)
+
+In MultinomialNB.py file we have make check object where we have instantiate MultinomialNB() class we have use fit method which fit naïve bayes classifier according to X,Y(sXTrain, yTrain).In this for loop (for img in X[0:subset,:]) we have convolve all the images do image processing in it.
+
+To tweak the parameters of classifier we have try to stick to simple conventions and keep the number of methods an object must follow to a bare minimum.In scikit-learn, two basic approaches to parameter search are given, one of which we use is GridSearchCV.CNN according to us can be one of the other tecnhnique to get accuracy of 99% on kaggle.
+
+## ACCURACY
+We have got 0.96700 accuray on 42000 data using 5x5 SVM unweighted filter.
+![output image](https://user-images.githubusercontent.com/60998648/115859740-09918900-a44a-11eb-9025-134471a80205.jpeg)
+
+## REFERENCES
 
 
 
