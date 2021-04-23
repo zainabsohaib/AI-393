@@ -8,4 +8,5 @@ StdID | Name
 ## PROBLEMS FACES
 
 ### Problem 1: 
+![output image](https://user-images.githubusercontent.com/62794527/115845399-3f2e7600-a43a-11eb-9ad3-7ee497c5a6f7.jpeg)
 
