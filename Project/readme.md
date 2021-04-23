@@ -8,10 +8,10 @@ StdID | Name
 ## PROBLEMS FACES
 
 ### Problem 1: 
-The first issue we encountered was that while looking for convolution, we found convolution neural networks, which were solved with deep learning using tenserflow and keras, but after applying tencique using the tensorflow library, we discovered that we needed to use scipy convolve python.
+The first problem we ran into was that when searching for convolution, we came across convolution neural networks, which were solved with deep learning using tenserflow and keras, but after using the tensorflow library to apply tencique, we discovered that we needed to use scipy convolve python.
 
 ### Problem 2: 
-The second issue was that we spent four days looking for and using CNN, only to discover later that we needed to use scipy and numpy instead.
+Second, we spent four days searching for and using CNN only to find later that we wanted to use scipy and numpy instead.
 
 ## APROACHES
 
