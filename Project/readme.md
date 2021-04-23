@@ -52,6 +52,8 @@ We have got 0.96700 accuray on 42000 data using 5x5 SVM unweighted filter.
 ![accuracy](https://user-images.githubusercontent.com/68737826/115861253-05ff0180-a44c-11eb-9cd7-c46eba86e6fd.jpeg)
 
 ## REFERENCES
+* https://scikit-learn.org/stable/modules/generated/sklearn.naive_bayes.MultinomialNB.html
+* https://stackabuse.com/linear-regression-in-python-with-scikit-learn/
 
 
 
