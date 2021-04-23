@@ -68,7 +68,7 @@ print(sX.shape)
 sXTrain, sXTest, yTrain, yTest = train_test_split(sX,sY,test_size=0.2,random_state=0)
 print(sXTest.shape,", ",yTest.shape)
 print(sXTrain.shape,", ",yTrain.shape)
-#svm started from here
+#svm work started from here
 svm_check = SVC(kernel="rbf", random_state=42, verbose=3,C=9)
 svm_check.fit(sizeTrain,yTrain)
 y_test_pred_svm = svm_check.predict(sXTest)
@@ -147,7 +147,7 @@ print(sX.shape)
 sXTrain, sXTest, yTrain, yTest = train_test_split(sX,sY,test_size=0.2,random_state=0)
 print(sXTest.shape,", ",yTest.shape)
 print(sXTrain.shape,", ",yTrain.shape)
-#svm started from here
+#svm work started from here
 svm_check = SVC(kernel="rbf", random_state=42, verbose=3,C=9)
 svm_check.fit(sizeTrain,yTrain)
 y_test_pred_svm = svm_check.predict(sXTest)
@@ -237,7 +237,7 @@ print(sX.shape)
 sXTrain, sXTest, yTrain, yTest = train_test_split(sX,sY,test_size=0.2,random_state=0)
 print(sXTest.shape,", ",yTest.shape)
 print(sXTrain.shape,", ",yTrain.shape)
-#svm started from here
+#svm work started from here
 svm_check = SVC(kernel="rbf", random_state=42, verbose=3,C=9)
 svm_check.fit(sizeTrain,yTrain)
 y_test_pred_svm = svm_check.predict(sXTest)
@@ -321,7 +321,7 @@ print(sX.shape)
 sXTrain, sXTest, yTrain, yTest = train_test_split(sX,sY,test_size=0.2,random_state=0)
 print(sXTest.shape,", ",yTest.shape)
 print(sXTrain.shape,", ",yTrain.shape)
-#svm started from here
+#svm work started from here
 svm_check = SVC(kernel="rbf", random_state=42, verbose=3,C=9)
 svm_check.fit(sizeTrain,yTrain)
 y_test_pred_svm = svm_check.predict(sXTest)
@@ -400,7 +400,7 @@ print(sX.shape)
 sXTrain, sXTest, yTrain, yTest = train_test_split(sX,sY,test_size=0.2,random_state=0)
 print(sXTest.shape,", ",yTest.shape)
 print(sXTrain.shape,", ",yTrain.shape)
-	#svm started from here
+	#svm work started from here
 svm_check = SVC(kernel="rbf", random_state=42, verbose=3,C=9)
 svm_check.fit(sizeTrain,yTrain)
 y_test_pred_svm = svm_check.predict(sXTest)
@@ -480,7 +480,7 @@ print(sX.shape)
 sXTrain, sXTest, yTrain, yTest = train_test_split(sX,sY,test_size=0.2,random_state=0)
 print(sXTest.shape,", ",yTest.shape)
 print(sXTrain.shape,", ",yTrain.shape)
-#svm started from here
+#svm work started from here
 svm_check = SVC(kernel="rbf", random_state=42, verbose=3,C=9)
 svm_check.fit(sizeTrain,yTrain)
 y_test_pred_svm = svm_check.predict(sXTest)
