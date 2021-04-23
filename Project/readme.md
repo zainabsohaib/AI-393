@@ -27,6 +27,10 @@ Cross validation score of each technique with screenshots are following:
 ![multinomialnb 9 by 9 weighted](https://user-images.githubusercontent.com/60998648/115859314-748e9000-a449-11eb-9a36-942cf39fac0b.PNG)
 
 * 5 by 5 linear regression unweighted filter
+![linear unweighted 5 by 5](https://user-images.githubusercontent.com/68737826/115860964-a99be200-a44b-11eb-8f10-8232e4560bf3.PNG)
+
+* 5 by 5 multinomialNB unweighted filter
+
 
 
 In MultinomialNB.py file we have make check object where we have instantiate MultinomialNB() class we have use fit method which fit naïve bayes classifier according to X,Y(sXTrain, yTrain).In this for loop (for img in X[0:subset,:]) we have convolve all the images do image processing in it.In LinearRegression.py file after instantiating linear regression class fit method is call with our train to train on our data. (sXTest) contains predicted values for input values of numpy array.In KNN.py file KNeighborsClassifier(n_neighbors=7,p=2,metric='euclidean') finds the k neighbors of a point and below it fit method fits the k-nearest neighbors classifier from the training dataset. Predict(sXTest) is predicting the target for provided data.In SVM.py fit method is fitting the SVM model according to given training data and predict(sXTest) is performing classification on samples in X.To tweak the parameters of classifier we have try to stick to simple conventions and keep the number of methods an object must follow to a bare minimum.In scikit-learn, two basic approaches to parameter search are given, one of which we use is GridSearchCV.CNN according to us can be one of the other tecnhnique to get accuracy of 99% on kaggle.
