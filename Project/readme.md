@@ -57,6 +57,8 @@ We have got 0.96700 accuray on 42000 data using 5x5 SVM unweighted filter.
 ## REFERENCES
 * https://scikit-learn.org/stable/modules/generated/sklearn.naive_bayes.MultinomialNB.html
 * https://stackabuse.com/linear-regression-in-python-with-scikit-learn/
+* https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.KNeighborsRegressor.html
+* https://www.datacamp.com/community/tutorials/k-nearest-neighbor-classification-scikit-learn
 
 
 
